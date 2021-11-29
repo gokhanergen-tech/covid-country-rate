@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import gokhan.covid19.Cumulative?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="vbox" fx:controller="gokhan.covid19.CumulationController">
+    <Button fx:id="back" text="Geri dön" onAction="#back_buton">
+        <effect>
+    <DropShadow >
+    <color>green</color>
+    </DropShadow></effect>
+    
+    <style>
+     -fx-background-color:green;
+     -fx-text-fill:white;
+     -fx-alignment:center;
+    </style></Button>
+    <Button fx:id="Deaths" text="Deaths" onAction="#deaths"></Button>
+    <Button fx:id="Cases" text="Cases" onAction="#cases"></Button>
+    <HBox fx:id="hbox">
+     
+      <ListView fx:id="listview">
+      
+      </ListView>
+      <Button fx:id="selected_clear" text="Sıfırla" onAction="#selects"></Button>
+    </HBox>
+	<!-- TODO Add Nodes -->
+</VBox>
+

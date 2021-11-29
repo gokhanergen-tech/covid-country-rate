@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.control.ProgressBar?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="gokhan.covid19.MainViewController">
+   
+<padding><Insets top="10"></Insets></padding>
+    <style>
+      -fx-background-color:skyblue;
+    </style>
+    <effect>
+    <DropShadow color="green">
+     <input><InnerShadow ><color>green</color></InnerShadow></input>
+    </DropShadow>
+    </effect>
+    <children>
+    <HBox alignment="center">
+    <Label text="Dataset URL:"></Label>
+	<TextField fx:id="textfield" text="https://opendata.ecdc.europa.eu/covid19/casedistribution/xml/" prefWidth="300"></TextField>
+	<Button fx:id="click" text="Get Data" onAction="#getData"></Button>
+	
+	<ProgressBar fx:id="datacontrol" >
+	<padding><Insets left="5" top="5"></Insets></padding>
+   <style>
+   -fx-alignment:center;
+   -fx-undeterminate-bar-animation-time:10
+   </style>
+   </ProgressBar>
+    </HBox>
+    <GridPane fx:id="grid" hgap="2" vgap="3" >
+    <VBox.margin><Insets top="20" left="10"></Insets></VBox.margin>
+     <Button fx:id="covidtable" text="Covid Table" GridPane.columnIndex="0" GridPane.rowIndex="0" onAction="#covidtable"></Button>
+     <Label text="Tablo için tıklayınız.." GridPane.columnIndex="1" GridPane.rowIndex="0"></Label>
+     <Button fx:id="distribution" text="Distribution" GridPane.columnIndex="0" GridPane.rowIndex="1" onAction="#distribution"></Button>
+     <Label text="Dağılım grafiği için tıklayınız.." GridPane.columnIndex="1" GridPane.rowIndex="1"></Label>
+     <Button fx:id="cumulative" text="Cumulative" GridPane.columnIndex="0" GridPane.rowIndex="2" onAction="#cumulative"></Button>
+     <Label text="Kümülatif grafiği için tıklayınız.." GridPane.columnIndex="1" GridPane.rowIndex="2"></Label>
+     <style>
+     -fx-paddind:10px;
+     -fx-background-color:skyblue;
+     -fx-border-color:green;
+     -fx-border-width:5pt
+     
+     
+     </style>
+  
+     <Label GridPane.rowSpan="3" GridPane.columnIndex="2" text="Covid19">
+     
+     
+     <style>
+     -fx-font-size:50px;
+     -fx-text-fill:rgba(0,0,0,0.5);
+     -fx-text-alignment:center
+     </style>
+     
+    
+     </Label>
+    </GridPane>
+    
+    </children>
+	
+</VBox>
+

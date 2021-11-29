@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import gokhan.covid19.CovidTable?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.effect.MotionBlur?>
+
+<VBox fx:id="vbox" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gokhan.covid19.CovidTableController">
+    <Button fx:id="back" text="Geri dön" onAction="#back_buton">
+    <effect>
+    <DropShadow >
+    <color>green</color>
+    </DropShadow></effect>
+    
+    <style>
+     -fx-background-color:green;
+     -fx-text-fill:white;
+     -fx-alignment:center;
+    </style>
+    </Button>
+	<!-- TODO Add Nodes -->
+</VBox>
+
