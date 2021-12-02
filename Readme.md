@@ -1,6 +1,6 @@
 Program çalıştığı zaman önümüze 3 buton grafik verisi geçiş butonlarıdır.
 Get Data ile veriler çekilir, veriler çekildiğinde ise önümüze bildiri gelecek.
-ardından butonlar ile grafikleri kontrol edebliriz.
+ardından butonlar ile grafikleri kontrol edebiliriz.
 
 <h1>Covid Table sahnesi</h1>
 
